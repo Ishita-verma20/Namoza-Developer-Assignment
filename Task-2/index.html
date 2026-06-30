@@ -4,6 +4,442 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrthoNow | Expert Orthopaedic Consultation</title>
+    <meta name="theme-color" content="#0F62FE">
+    <meta
+    name="description"
+    content="Book expert orthopaedic consultations with experienced specialists across Bengaluru, Hyderabad and Chennai.">
+
+    <style>
+
+       /* ==========================================
+        CSS RESET
+        ========================================== */
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background:#f8fafc;
+        color:#1f2937;
+        line-height:1.6;
+    }
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+
+section{
+    padding:80px 0;
+}
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#0F62FE;
+    --primary-dark:#0043CE;
+
+    --secondary:#2563EB;
+
+    --success:#16A34A;
+
+    --background:#F8FAFC;
+
+    --white:#FFFFFF;
+
+    --text:#1F2937;
+
+    --text-light:#6B7280;
+
+    --border:#E5E7EB;
+
+    --radius:12px;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --max-width:1200px;
+
+}
+
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+
+.container{
+
+    width:min(90%, var(--max-width));
+
+    margin:0 auto;
+
+}
+
+h1{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    color:var(--text);
+
+}
+
+h2{
+
+    font-size:2.2rem;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+
+section p{
+
+    font-size:1rem;
+
+}
+
+/* ==========================================
+   COMMON BUTTON
+========================================== */
+
+.cta-button,
+button{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    padding:15px 32px;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.cta-button:hover,
+button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+#hero{
+    background:linear-gradient(135deg,#EFF6FF,#FFFFFF);
+    padding:80px 0;
+}
+
+#hero .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    margin-bottom:25px;
+}
+
+.hero-content > p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.hero-highlights{
+    margin-bottom:35px;
+}
+
+.hero-highlights p{
+    margin-bottom:12px;
+    font-weight:600;
+    color:var(--text);
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+/* ==========================================
+   BENEFITS SECTION
+========================================== */
+
+#benefits{
+    background:var(--white);
+}
+
+#benefits h2{
+    margin-bottom:50px;
+}
+
+.benefits-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.benefit-card{
+    background:var(--background);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-8px);
+}
+
+.benefit-card h3{
+    color:var(--primary);
+}
+
+.benefit-card p{
+    margin:0;
+}
+
+/* ==========================================
+   TRUST SECTION
+========================================== */
+
+#trust{
+    background:#eef2f7;
+}
+
+#trust h2{
+    margin-bottom:50px;
+}
+
+.trust-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.trust-card{
+    background:var(--white);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.trust-card:hover{
+    transform:translateY(-8px);
+}
+
+.trust-card h3{
+    color:var(--primary);
+}
+
+.trust-card p{
+    margin:0;
+}
+
+/* ==========================================
+   CONSULTATION FORM
+========================================== */
+
+#consultation-form{
+    background:var(--white);
+}
+
+#consultation-form .container{
+    max-width:700px;
+}
+
+#consultation-form h2{
+    margin-bottom:20px;
+}
+
+.form-description{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:8px;
+    color:var(--text);
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(15,98,254,.15);
+}
+
+#submit-btn{
+    width:100%;
+    margin-top:10px;
+}
+
+.privacy-note{
+    text-align:center;
+    font-size:.9rem;
+    margin-top:20px;
+}
+
+#thank-you-message{
+    text-align:center;
+    padding:30px;
+    background:#ECFDF5;
+    border-radius:12px;
+    margin-top:30px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:var(--secondary);
+    color:var(--white);
+    padding:30px 0;
+}
+
+footer .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+footer p{
+    color:var(--white);
+    margin:0;
+}
+
+footer nav{
+    display:flex;
+    gap:20px;
+}
+
+footer a{
+    color:var(--white);
+    transition:.3s;
+}
+
+footer a:hover{
+    opacity:.8;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    #hero .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .benefits-container,
+    .trust-container{
+        grid-template-columns:1fr;
+    }
+
+    footer .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    footer nav{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+
+
+    </style>
+
 </head>
 <body>
 
@@ -13,14 +449,36 @@
 
         <div class="hero-content">
 
-            ...
+            <h1>Get an Expert Orthopaedic Opinion Today</h1>
+
+            <p>
+                Consult experienced orthopaedic specialists for knee, back, and joint pain.
+                Book your consultation in less than a minute at one of our 9 clinics across
+                Bengaluru, Hyderabad, and Chennai.
+            </p>
+
+            <div class="hero-highlights">
+
+                <p>✔ Experienced Orthopaedic Specialists</p>
+
+                <p>✔ 9 Clinics Across South India</p>
+
+                <p>✔ Same-Day Appointments Available</p>
+
+            </div>
+
+            <a href="#consultation-form" class="cta-button">
+                Book Free Consultation
+            </a>
 
         </div>
 
         <div class="hero-image">
 
-            ...
-
+            <img
+            src="assets/doctor.jpg"
+            alt="Orthopaedic doctor consulting a patient"
+            loading="lazy">
         </div>
 
     </div>
@@ -88,7 +546,7 @@
 
             <article class="trust-card">
 
-                <h3>⭐ 4.8 / 5 Patient Rating</h3>
+                <h3> 4.8 / 5 Patient Rating</h3>
 
                 <p>
                     Consistently rated highly by patients for quality treatment,
@@ -99,7 +557,7 @@
 
             <article class="trust-card">
 
-                <h3>🏥 9 Modern Clinics</h3>
+                <h3> 9 Modern Clinics</h3>
 
                 <p>
                     Conveniently located across Bengaluru, Hyderabad, and Chennai
@@ -110,7 +568,7 @@
 
             <article class="trust-card">
 
-                <h3>👨‍⚕️ Experienced Specialists</h3>
+                <h3> Experienced Specialists</h3>
 
                 <p>
                     Dedicated orthopaedic doctors providing evidence-based diagnosis,
@@ -132,7 +590,7 @@
         <h2>Book Your Consultation</h2>
 
         <p class="form-description">
-            Complete the form below and our team will contact you within 30 minutes suring working hours. 
+            Complete the form below and our team will contact you within 30 minutes during working hours. 
         </p>
 
         <form id="consultationForm">
@@ -168,6 +626,7 @@
             <button type="submit" id="submit-btn">
                 Book My Consultation
             </button>
+
             <p class="privacy-note">
              Your information is kept confidential and will only be used to contact you regarding your consultation.
             </p>
@@ -195,7 +654,7 @@
 
     <div class="container">
 
-        <p>© 2026 OrthoNow Healthcare. All Rights Reserved.</p>
+        <p>© 2026 OrthoNow Healthcare. All rights reserved.</p>
 
         <nav>
 
@@ -212,8 +671,54 @@
 </footer>
 
     <script>
-    // JavaScript will be added here later.
-    </script>
+
+
+window.dataLayer = window.dataLayer || [];
+
+const consultationForm = document.getElementById("consultationForm");
+const thankYouMessage = document.getElementById("thank-you-message");
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
+
+consultationForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name = nameInput.value.trim();
+const phone = phoneInput.value.trim();
+
+if(name === "" || phone === ""){
+    alert("Please fill in all required fields.");
+    return;
+}
+
+if (!/^\d{10}$/.test(phone)) {
+    alert("Please enter a valid 10-digit phone number.");
+    return;
+}
+
+window.dataLayer.push({
+
+    event:"consultation_form_submitted",
+
+    clinic_location:"Bengaluru",
+
+    device_type:window.innerWidth<768?"mobile":"desktop",
+
+    lead_source:"landing_page",
+
+    page_url:window.location.href,
+
+    submission_time:new Date().toISOString()
+
+});
+
+consultationForm.style.display = "none";
+
+thankYouMessage.removeAttribute("hidden");
+});
+
+</script>
 
 </body>
 </html>
