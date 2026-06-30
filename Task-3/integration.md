@@ -98,6 +98,10 @@ The following information is stored in HubSpot CRM:
 
 ---
 
+## Phone Number Deduplication
+
+HubSpot performs contact deduplication primarily using email addresses rather than phone numbers. Since this consultation form only collects a patient's name and phone number, the backend should first search HubSpot for an existing contact using the submitted phone number. If a matching contact exists, it should update the existing contact instead of creating a new one. If no matching phone number is found, a new contact should be created. This prevents duplicate patient records and ensures accurate CRM data.
+
 # Karix WhatsApp Integration
 
 ## Purpose

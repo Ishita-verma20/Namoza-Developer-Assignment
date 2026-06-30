@@ -129,6 +129,12 @@ git clone <repository-url>
 
 ---
 
+## PageSpeed Insights
+
+A mobile performance report was generated using Google Lighthouse/PageSpeed Insights.
+
+![PageSpeed Mobile Score](Task-2/pagespeed-mobile.png)
+
 # Author
 
 **Ishita Verma**

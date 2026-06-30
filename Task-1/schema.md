@@ -188,3 +188,9 @@ window.dataLayer.push({
 ## Implementation Note
 
 The example values shown in the dataLayer payloads are sample values used to demonstrate the event structure. In the actual implementation, the frontend developer will populate these values dynamically from the user's input and the backend response. Google Tag Manager listens for these custom events and forwards them to Google Analytics 4 and Google Ads.
+
+# Google Ads Conversion Action
+
+The conversion action that should be imported into Google Ads is `consultation_form_submitted`.
+
+This event represents a qualified lead because the user has successfully completed and submitted the consultation request form. Optimizing campaigns toward this conversion helps Google Ads focus on users who are more likely to become actual patients rather than users who only interact with the landing page.
